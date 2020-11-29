@@ -8,6 +8,8 @@ def load_library(file)
   
   emoticon_library.collect do |key, value|
     emoticon_library[key] = {:english => value[0], :japenese => value[1]}
+  end
+  emoticon_library
 end
 
 def get_japanese_emoticon
