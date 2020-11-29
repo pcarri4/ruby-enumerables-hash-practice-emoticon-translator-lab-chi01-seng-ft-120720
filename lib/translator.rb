@@ -26,6 +26,10 @@ def get_japanese_emoticon(file, english_emoticon)
   return "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
+def get_english_meaning(file, japanese_emoticon)
   # code goes here
+  emoticon_library = load_library(file)
+  emoticon_library.each do |key_emotion, value_eng_jap_hashes|
+    value_eng_jap_hashes.each do |language_key, emoticon_value|
+      if value_eng_jap_hashes[language_key] == japanese_emoticon
 end
