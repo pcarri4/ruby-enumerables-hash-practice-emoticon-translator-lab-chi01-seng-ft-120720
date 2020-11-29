@@ -32,4 +32,11 @@ def get_english_meaning(file, japanese_emoticon)
   emoticon_library.each do |key_emotion, value_eng_jap_hashes|
     value_eng_jap_hashes.each do |language_key, emoticon_value|
       if value_eng_jap_hashes[language_key] == japanese_emoticon
+        return key_emotion
+      end
+      
+    end
+  end
+  return "Sorry, that emoticon was not found"
+  
 end
